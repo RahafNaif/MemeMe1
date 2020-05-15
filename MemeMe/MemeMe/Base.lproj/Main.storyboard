@@ -15,22 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kv1-qc-clB">
+                                <rect key="frame" x="0.0" y="21" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="Ed9-32-9l7">
+                                        <barButtonItem key="leftBarButtonItem" title="share" image="square.and.arrow.up" catalog="system" id="WCG-ht-flb">
+                                            <connections>
+                                                <action selector="shareImage:" destination="BYZ-38-t0r" id="C7G-Eq-3YH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Dvw-U6-aQf">
+                                            <connections>
+                                                <action selector="cancel:" destination="BYZ-38-t0r" id="2UH-Ut-c2j"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9xK-L1-PkU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="65" width="414" height="748"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoP-rh-Xpr">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="EoP-rh-Xpr">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" style="plain" id="nUD-gU-BIE">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yap-cF-LCm">
-                                            <rect key="frame" x="20" y="12" width="51" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="camera"/>
-                                            <connections>
-                                                <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ru-5o-gYY"/>
-                                            </connections>
-                                        </button>
+                                    <barButtonItem width="118" style="plain" systemItem="fixedSpace" id="5A0-8q-gKe"/>
+                                    <barButtonItem image="camera" catalog="system" id="QD4-jM-lsV" userLabel="Camera Button">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="D3H-VX-CHD"/>
+                                        </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="78" style="plain" systemItem="fixedSpace" id="3Ui-oL-Vc0"/>
                                     <barButtonItem title="Pick" image="photo.on.rectangle" catalog="system" id="XPS-av-ZZP">
                                         <connections>
                                             <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="dOf-s5-g3m"/>
@@ -38,40 +52,44 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" allowsEditingTextAttributes="YES" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fjA-t8-AEV" userLabel="top">
-                                <rect key="frame" x="188.5" y="78.5" width="30" height="19.5"/>
-                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPa-rN-RFU" userLabel="topText">
+                                <rect key="frame" x="180" y="65" width="54" height="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLX-AO-sFm">
-                                <rect key="frame" x="177" y="729" width="60" height="18.5"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qx5-G2-bce" userLabel="bottomText">
+                                <rect key="frame" x="150" y="780" width="114" height="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fjA-t8-AEV" firstAttribute="centerX" secondItem="9xK-L1-PkU" secondAttribute="centerX" constant="-3.5" id="52f-gb-c0q"/>
-                            <constraint firstItem="9xK-L1-PkU" firstAttribute="trailing" secondItem="EoP-rh-Xpr" secondAttribute="trailing" id="7l8-Qm-rUu"/>
-                            <constraint firstItem="DLX-AO-sFm" firstAttribute="top" secondItem="9xK-L1-PkU" secondAttribute="bottom" constant="-84" id="8Va-J9-snf"/>
-                            <constraint firstItem="EoP-rh-Xpr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Aiv-mH-ED2"/>
-                            <constraint firstItem="EoP-rh-Xpr" firstAttribute="top" secondItem="9xK-L1-PkU" secondAttribute="bottom" id="Aqu-k3-lLL"/>
-                            <constraint firstItem="9xK-L1-PkU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="EbF-i8-PSE"/>
-                            <constraint firstItem="9xK-L1-PkU" firstAttribute="leading" secondItem="EoP-rh-Xpr" secondAttribute="leading" id="FrC-Xw-Eek"/>
-                            <constraint firstItem="EoP-rh-Xpr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Goz-L9-gvm"/>
-                            <constraint firstItem="DLX-AO-sFm" firstAttribute="centerX" secondItem="9xK-L1-PkU" secondAttribute="centerX" id="Saz-9w-QmB"/>
-                            <constraint firstItem="EoP-rh-Xpr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ffb-dO-0ii"/>
-                            <constraint firstItem="9xK-L1-PkU" firstAttribute="top" secondItem="fjA-t8-AEV" secondAttribute="bottom" constant="-98" id="xlm-HS-5RT"/>
+                            <constraint firstItem="9xK-L1-PkU" firstAttribute="leading" secondItem="Kv1-qc-clB" secondAttribute="leading" id="0BE-ip-edv"/>
+                            <constraint firstItem="Kv1-qc-clB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8u3-P2-Bjj"/>
+                            <constraint firstItem="EoP-rh-Xpr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="A3K-g9-6Ob"/>
+                            <constraint firstItem="9xK-L1-PkU" firstAttribute="trailing" secondItem="Kv1-qc-clB" secondAttribute="trailing" id="F8G-1C-J0C"/>
+                            <constraint firstItem="EoP-rh-Xpr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GsN-0L-Yda"/>
+                            <constraint firstItem="iPa-rN-RFU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hz6-f5-7Uh"/>
+                            <constraint firstItem="qx5-G2-bce" firstAttribute="bottom" secondItem="9xK-L1-PkU" secondAttribute="bottom" id="NV8-wU-l4u"/>
+                            <constraint firstItem="qx5-G2-bce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PfN-CM-bko"/>
+                            <constraint firstItem="iPa-rN-RFU" firstAttribute="top" secondItem="9xK-L1-PkU" secondAttribute="top" id="aim-6l-dQL"/>
+                            <constraint firstItem="EoP-rh-Xpr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gP6-lO-TAB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Kv1-qc-clB" secondAttribute="top" constant="23" id="ib5-n1-fo1"/>
+                            <constraint firstItem="Kv1-qc-clB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qUO-p7-h2g"/>
+                            <constraint firstItem="EoP-rh-Xpr" firstAttribute="top" secondItem="9xK-L1-PkU" secondAttribute="bottom" id="rSA-Ul-0gY"/>
+                            <constraint firstItem="9xK-L1-PkU" firstAttribute="top" secondItem="Kv1-qc-clB" secondAttribute="bottom" id="was-nb-pJP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="bottom" destination="DLX-AO-sFm" id="lwe-Ox-d99"/>
-                        <outlet property="cameraButton" destination="nUD-gU-BIE" id="XPX-He-Zui"/>
+                        <outlet property="bottom" destination="qx5-G2-bce" id="LMu-f3-51p"/>
+                        <outlet property="cameraButton" destination="QD4-jM-lsV" id="Fz1-Oc-OZf"/>
                         <outlet property="imageView" destination="9xK-L1-PkU" id="bzi-RN-8RT"/>
-                        <outlet property="topText" destination="fjA-t8-AEV" id="rQh-DY-BWT"/>
+                        <outlet property="share" destination="WCG-ht-flb" id="AbE-V9-nLa"/>
+                        <outlet property="topText" destination="iPa-rN-RFU" id="ZCC-gp-1lk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,6 +98,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="64" height="48"/>
         <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>
