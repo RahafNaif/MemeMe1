@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
     
-    var memes = [MemeEditorViewController.Meme]()
+    var memes = [Meme]()
 
 
 

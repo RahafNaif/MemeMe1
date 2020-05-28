@@ -132,14 +132,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         view.frame.origin.y=0
     }
     
-    struct Meme {
-        
-        var topText:String
-        var bottomText:String
-        var orginalImage:UIImage
-        var memedImage:UIImage
-        
-    }
     
     func hideToolbars(_ hide: Bool){
         navbar.isHidden = hide

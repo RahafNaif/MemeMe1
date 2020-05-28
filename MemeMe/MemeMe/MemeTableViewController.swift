@@ -10,10 +10,17 @@ import UIKit
 
 class MemeTableViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var memes: [MemeEditorViewController.Meme]! {
+    @IBOutlet var tableView: UITableView!
+    
+    var memes: [Meme]! {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         return appDelegate.memes
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView!.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,7 +33,7 @@ class MemeTableViewController : UIViewController, UITableViewDataSource, UITable
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
         cell.textLabel?.text = meme.topText; meme.bottomText
-        cell.imageView?.image = UIImage(named: meme.memedImage)
+        cell.imageView?.image = meme.memedImage
         
         return cell
     }
@@ -34,6 +41,7 @@ class MemeTableViewController : UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        
         detailController.meme = self.memes[(indexPath as NSIndexPath).row]
         self.navigationController!.pushViewController(detailController, animated: true)
     }
