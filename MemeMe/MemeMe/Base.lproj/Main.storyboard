@@ -46,7 +46,7 @@
         <!--Sent Memes-->
         <scene sceneID="Rxz-f7-hkn">
             <objects>
-                <tableViewController id="gup-Nb-jim" customClass="MemeTableViewController" sceneMemberID="viewController">
+                <tableViewController id="gup-Nb-jim" customClass="MemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jNM-W7-fie">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,7 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="fOs-bc-zEF">
             <objects>
-                <viewController id="kOT-mJ-lJf" customClass="MemeDetailViewController" sceneMemberID="viewController">
+                <viewController id="kOT-mJ-lJf" customClass="MemeDetailViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mer-61-vat">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,6 +302,6 @@
         <image name="table.fill" catalog="system" width="64" height="46"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R5W-zm-eXT"/>
+        <segue reference="mmW-FL-EPZ"/>
     </inferredMetricsTieBreakers>
 </document>

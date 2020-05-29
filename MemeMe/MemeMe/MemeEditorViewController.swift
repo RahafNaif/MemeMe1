@@ -172,6 +172,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         controller.completionWithItemsHandler = { (activity, success, items, error) in
         if(success) {
                 self.save()
+                self.dismiss(animated: true, completion: nil)
+
           }
          }
     }
@@ -181,6 +183,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         imageView.image = nil
         topText.text = "TOP"
         bottom.text = "BOTTOM"
+        self.dismiss(animated: true, completion: nil)
+
     }
     
     
