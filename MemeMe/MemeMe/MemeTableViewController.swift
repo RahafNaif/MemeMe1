@@ -20,7 +20,9 @@ class MemeTableViewController : UIViewController, UITableViewDataSource, UITable
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView!.reloadData()
+        
+        self.tableView!.reloadData()
+    
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,5 +47,12 @@ class MemeTableViewController : UIViewController, UITableViewDataSource, UITable
         detailController.meme = self.memes[(indexPath as NSIndexPath).row]
         self.navigationController!.pushViewController(detailController, animated: true)
     }
+    
+    @IBAction func addMeme(_ sender: Any) {
+        let editMeme = self.storyboard!.instantiateViewController(withIdentifier: "MemeEditorViewController")
+        
+        self.navigationController!.pushViewController(editMeme, animated: true)
+    }
+    
     
 }
