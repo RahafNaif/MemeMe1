@@ -14,6 +14,11 @@ class MemeDetailViewController : UIViewController{
     
     var meme:Meme!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
