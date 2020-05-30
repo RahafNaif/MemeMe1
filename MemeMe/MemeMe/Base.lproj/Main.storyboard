@@ -100,17 +100,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gV4-LK-7qN">
-                                <rect key="frame" x="0.0" y="318.66666666666669" width="414" height="259.00000000000006"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="259" id="6zp-pp-GpT"/>
-                                    <constraint firstAttribute="width" constant="414" id="e5B-oB-tAo"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gV4-LK-7qN" firstAttribute="centerY" secondItem="mer-61-vat" secondAttribute="centerY" id="2Le-3B-92t"/>
-                            <constraint firstItem="gV4-LK-7qN" firstAttribute="centerX" secondItem="mer-61-vat" secondAttribute="centerX" id="jfP-kG-sc9"/>
+                            <constraint firstItem="gV4-LK-7qN" firstAttribute="top" secondItem="mer-61-vat" secondAttribute="top" id="BaK-MR-gqo"/>
+                            <constraint firstAttribute="bottom" secondItem="gV4-LK-7qN" secondAttribute="bottom" id="HaL-ut-tQe"/>
+                            <constraint firstItem="gV4-LK-7qN" firstAttribute="trailing" secondItem="mdL-11-OKA" secondAttribute="trailing" id="Hhd-jU-vRe"/>
+                            <constraint firstItem="gV4-LK-7qN" firstAttribute="leading" secondItem="mdL-11-OKA" secondAttribute="leading" id="URl-XU-7xX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mdL-11-OKA"/>
                     </view>
